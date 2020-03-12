@@ -1,0 +1,19 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ActiveMembershipCheckResponse _$ActiveMembershipCheckResponseFromJson(
+    Map<String, dynamic> json) {
+  return ActiveMembershipCheckResponse(
+      status: json['status'] as String,
+      message: json['message'] as String,
+      isMember: json['isMember'] as bool);
+}
+
+Map<String, dynamic> _$ActiveMembershipCheckResponseToJson(
+        ActiveMembershipCheckResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'isMember': instance.isMember
+    };
