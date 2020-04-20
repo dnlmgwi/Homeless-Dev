@@ -2,22 +2,33 @@ import 'package:json_annotation/json_annotation.dart';
 part 'loginresponse.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-
 class LoginResponse {
-  String status;
-  String message;
-  String keyPublic;
-  String keySecret;
-  String businesscode;
-  String locationcode;
+  String user, email, group, i18n, name;
+  bool active;
+  @JsonKey(name: 'api_key')
+  String apiKey;
 
-  LoginResponse(
-      {this.status,
-      this.message,
-      this.keyPublic,
-      this.keySecret,
-      this.businesscode,
-      this.locationcode});
+  @JsonKey(name: '_modified')
+  int modified;
+
+  @JsonKey(name: '_created')
+  int created;
+
+  @JsonKey(name: '_id')
+  String id;
+
+  LoginResponse({
+    this.user,
+    this.name,
+    this.i18n,
+    this.group,
+    this.email,
+    this.apiKey,
+    this.active,
+    this.created,
+    this.id,
+    this.modified,
+  });
 
   /// A necessary factory constructor for creating a new User instance
   /// from a map. Pass the map to the generated `_$UserFromJson()` constructor.

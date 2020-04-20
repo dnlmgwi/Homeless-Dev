@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:crypto/crypto.dart';
-import 'package:whisqr/models/activecheck.dart';
+import 'package:whisqr2/models/activecheck.dart';
 import 'dart:convert';
-import 'package:whisqr/models/loginresponse.dart';
+import 'package:whisqr2/models/loginresponse.dart';
 
 class UserRepository {
   Dio dio = new Dio();
