@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:whisqr/data/constant.dart';
 import 'package:whisqr/models/loginresponse.dart';
+import 'package:crypto/crypto.dart';
+import 'dart:convert';
 
 class UserRepository {
   Dio dio = new Dio();
@@ -23,7 +25,7 @@ class UserRepository {
   }
 
   // Future<String> contentHash({reqBody}) async {
-  //   var key = utf8.encode(keySecret);
+  //   var key = utf8.encode("Homeless");
   //   var bytes = utf8.encode(reqBody);
 
   //   Hmac hmacSha256 = Hmac(sha256, key); // HMAC-SHA256
